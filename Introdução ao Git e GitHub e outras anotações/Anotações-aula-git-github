@@ -1,0 +1,31 @@
+## Objetos do Git
+
+# Objetos-Git
+
+**SHA1** é um algoritmo de encriptação 
+	Forma curta de representar um arquivo
+	A SHA significa Secure Hash Algorithm (Allgoritmo de Hash Seguro), é um cinjunto de funções hash criptográficas projetadas pela NSA.
+	A encriptação gera um conjunto de caracteres de 40 dígitos.
+	
+echo  "ola mundo" | openssl sha1 
+		com esse comando consigo ver a chave de encriptação da string "ola mundo"
+		
+**Blob** (bolha) (objetos fundamentais)
+	O blob é um objeto que armazena os meta dados do git (tipo do objeto, tamanho do arquivo, etc)
+		
+echo 'conteudo' | git hash-object --stdin
+fc31e91b26cf85a55e072476de7f263c89260eb1
+echo -e 'blob 9\0conteudo' | openssl sha1
+SHA1(stdin)= fc31e91b26cf85a55e072476de7f263c89260eb1
+	
+
+**Tree** (árvore)
+	Também contém meta dados. Aponta para um Blob.
+	Armazena blob, sha1 e o nome do texto.
+	Podem apontar tanto para blobs, quanto para outras árvores
+	Se mudar algo no arquivo, por conseguinte será mudada toda a estrutura do objeto do qual a árvore está apontando
+	
+**Commit**
+	Aponta para uma árvore, um parente (último commit realizado antes dele), aponta para um autor, aponta para uma mensagem.
+	
+O SHA1 desse commit é o hash de toda essa informação.

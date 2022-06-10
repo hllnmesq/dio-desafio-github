@@ -1,0 +1,12 @@
+Desafio de projeto
+
+Objetivo: compartilhar anotações e exercícios em seu próprio repositório. 
+
+Requisitos
+Noção básica de Git e GitHub, disponível no Bootcamp Fullstack. 
+Situação: conluída.
+
+Links úteis:  mardownguide.org - site com elementos e guias para uso de sintaxe básica de markdown.
+
+Comandos: para clonar repositório
+	git clone [https] [SSH] 
